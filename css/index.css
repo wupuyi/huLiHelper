@@ -1,0 +1,32 @@
+ html,body{
+      height: 100%;
+    }
+    body{display: flex;flex-flow: column;}
+      .header{
+        background-color: #2b5190;
+        width: 100%;
+        height: 60px;
+      }
+      .header p{
+        font-size: 20px;
+        color: #fff;
+        line-height: 60px;
+        margin : 0 20px;
+        float: left;
+      }
+      .header img{
+        margin:5px 0;
+        float: left;
+      }
+      .body{
+        flex: 1;
+        display: flex;
+      }
+      .siderBar{
+        width: 300px;
+        background-color: #ccc;
+      }
+      .main{
+        /*flex:1;*/
+        margin: 0 10px;
+      }

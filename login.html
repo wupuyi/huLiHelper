@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登陆</title>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  	<style>
+  	.input-group-addon{
+  		background-color: #2b5190;
+  		border-color: #2b5190;
+  	}
+  	.glyphicon{
+  		color: #fff;
+  	}
+  	.input-group{
+  		margin-top: 20px;
+  	}
+  	.btn{
+  		margin-top: 20px;
+  	}
+  	.login_body{
+  		width: 350px;
+  		height: 160px;
+  		margin: auto;
+  	}
+		
+	body {
+		background:url(image/hnist2.jpg) top center no-repeat; 
+		background-size:cover;
+
+	}
+	.content_body{
+		margin-top: 50px;
+	}
+
+
+
+  	</style>
+  </head>
+  <body>
+
+  	<div class="content_body">
+  		<div class="text-center">
+	  		<img src="image/huli-icon.gif" alt="湖理校徽" width="100px" height="100px"> 
+	  		<h2>欢迎使用湖理小助手后台管理系统</h2>
+  		</div>
+  		<form class="login_body"  method="post" id="form1">
+	  		<div class="input-group">
+			  <span class="input-group-addon " id="basic-addon1"><span class="glyphicon glyphicon-user
+"></span></span>
+				<!-- 输入用户名 -->
+			  <input type="text" class="form-control" placeholder="请输入用户名" aria-describedby="basic-addon1" id="admin_name" name="admin_name">
+			</div>
+			<div class="input-group">
+			  <span class="input-group-addon " id="basic-addon2"><span class="glyphicon glyphicon-lock
+"></span></span>
+				<!-- 输入密码 -->
+			  <input type="password" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon2" id="admin_password" name="admin_password"> 
+			</div>
+			<input type="submit" name="提交" class="btn btn-block btn-primary" value="登陆" id="submit" >
+		</form>
+  	</div>
+
+
+
+
+
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#submit").click(function(){
+    			if ($("#admin_name").val()=="") {
+    				alert("用户名不能为空");
+    			}
+    			else if ($("#admin_password").val()=="") {
+    				alert("密码不能为空");
+    			}
+    			else{
+            $("#form1").attr("action","php/login.php");
+            $("#form1").submit();
+    			}
+    		});
+    	});
+    </script>
+  </body>
+</html>
+</html>
